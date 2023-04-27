@@ -176,6 +176,13 @@ body {
   /* padding: 80px; */
 }
 
+@media only screen and (max-width: 1000px) {
+  .project--container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .project-card {
   width: 300px;
   height: 500px;
@@ -196,4 +203,22 @@ hr {
 .project-link {
   text-decoration: none;
   color: #ff9d00;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .hamburger {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .nav-links {
+    display: none;
+  }
 }
