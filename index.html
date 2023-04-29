@@ -11,18 +11,31 @@
     <script src="https://kit.fontawesome.com/0d9bc3f1fc.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav class="top-nav">
+      <div class="logo"><span>Jeremy Mark</span></div>
+    </nav>
+    <nav class="navbar">
+      <div class="wrapper">
+        <div class="nav-logo-container"><span class="navbar-logo">Jeremy Mark</span></div>
+        <ul class="nav-links">
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="dropdown-menu">
+        <ul>
+          <li><a class="dropdown-link" href="#about-me">About</a></li>
+          <li><a class="dropdown-link" href="#projects">Projects</a></li>
+          <li><a class="dropdown-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <section class="hero">
-        <nav class="nav">
-            <div class="logo"><span>Jeremy</span> Mark</div>
-            <ul class="nav-links">
-              <li><a href="#about-me">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
         <div class="hero-area">
           <div class="hero-text">
               <h1>Hello, I am Jeremy Mark</h1>
@@ -54,7 +67,7 @@
         </div>
         <div class="about-me--container">
           <div class="about-me-image--container">
-            <img class="about-me-image" src="https://static.tvmaze.com/uploads/images/medium_portrait/9/23342.jpg"/>
+            <img class="about-me-image" src="./images/jeremymark-hs.jpg"/>
           </div>
           <div class="about-me-content--container">
               <p class="about-me-content">I am a former business professional who transitioned into web development. I have always had a passion for learning and problem solving, and enjoy the challenges that programming provides. In my free time, I enjoy hanging out with my wife and dogs, enjoy the outdoors, working out, iced coffee and pop culture references.</p>
@@ -68,14 +81,14 @@
         </div>
         <div class="project--container">
             <div class="project-card">
-                <img class="project-image" src="" alt="Project One Image"/>
+                <img class="project-image" src="/images/hit-the-trails.png" alt="Project One Image"/>
                 <h3>Project One</h3>
                 <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
                 <hr />
                 <p class="subtext"><a class="project-link" href="https://github.com/jaymar85/hit-the-trails" target="_blank">View here</a></p>
             </div>
             <div class="project-card">                
-                <img class="project-image" src="" alt="Project Two Image"/>
+                <img class="project-image" src="/images/flash-curve.png" alt="Project Two Image"/>
                 <h3>Project Two</h3>
                 <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
                 <hr />

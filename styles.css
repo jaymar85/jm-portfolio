@@ -15,31 +15,63 @@ body {
   position: relative;
 }
 
-.nav {
-  position: fixed;
-  top: 0px;
+.navbar {
+  position: static;
   width: 100%;
-  background-color: rgba(29, 30, 34, 0.6);
+  background-color: rgb(29, 30, 34);
+  z-index: 100;
+}
+
+.navbar .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 60px;
 }
 
-.logo {
+.top-nav .logo {
   margin-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff9d00;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: none;
+  margin-left: 20px;
+  font-weight: bold;
+  color: #ff9d00;
+  font-size: 20px;
   color: #fff;
+  transition: .2s ease-in;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   justify-content: space-around;
-  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li:hover {
+  background-color: rgb(25, 167, 206);
+}
+
+.nav-links li:active {
+  background-color: rgb(20, 108, 148);
 }
 
 .nav-links a {
+  display: inline-block;
   text-decoration: none;
   color: #fff;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
 }
 
 .hero-area {
@@ -89,13 +121,25 @@ body {
   color: #222;
 }
 
+@media only screen and (max-width: 576px) {
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+  }
+  .hero-text h1 {
+    text-align: center;
+  }
+}
+
 /* Socials */
 .socials {
   background-color: rgba(29, 30, 34, 0.6);
   border-radius: 10px 0px 0px 10px;
   padding: 10px;
   position: fixed;
-  top: 25%;
+  top: 50%;
   right: 0%;
 }
 
@@ -110,7 +154,7 @@ body {
 /* Section Default Styles */
 .site-section {
   background-color: #222222;
-  padding: 25px 0;
+  padding: 50px 0;
 }
 .site-section h2 {
   color: #fff;
@@ -125,22 +169,34 @@ body {
 .about-me--container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 90vw;
   margin: 0 auto;
 }
 
 .about-me-image--container .about-me-image {
-  /* border: 5px solid #ff9d00; */
+  border: 5px solid rgb(25, 167, 206);
   width: 150px;
-  border-radius: 75px;
+  border-radius: 50%;
 }
 
 .about-me-content--container {
   width: 60%;
   display: flex;
   flex-direction: column;
-  /*   justify-content: space-around; */
+}
+
+@media only screen and (max-width: 576px) {
+    .about-me--container {
+      flex-direction: column;
+    }
+    .about-me-content--container {
+      width: 85%;
+    }
+    .about-me-content--container .resume-btn {
+      margin: auto;
+      text-align: center;
+    }
 }
 
 .resume-btn {
@@ -149,12 +205,14 @@ body {
   text-transform: uppercase;
   border: none;
   border-radius: 300px;
-  background-color: #ff9d00;
+  background-color: #ff9d00; 
   color: #fff;
+  margin: auto;
   padding: 1rem 2rem;
   text-decoration: none;
   cursor: pointer;
   width: fit-content;
+  transition: 0.15s ease-in;
 }
 
 .resume-btn:hover {
@@ -172,7 +230,7 @@ body {
 
 .project--container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   /* padding: 80px; */
 }
 
@@ -187,8 +245,13 @@ body {
   width: 300px;
   height: 500px;
   box-shadow: 5px 5px 20px grey;
-  margin: 0 10px;
+  margin: 10px;
   text-align: center;
+}
+
+.project-image {
+  width: 90%;
+    margin: 25px auto;
 }
 
 .subtext {
@@ -215,10 +278,65 @@ hr {
     border: 0;
     background-color: transparent;
     color: #fff;
-    font-size: 30px;
+    font-size: 20px;
+    width: 37px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: .2s ease;
+    border-radius: 50%;
+    padding: 7px;
+  }
+
+  .hamburger:hover {
+    background-color: rgb(25, 167, 206);
+  }
+
+  .hamburger:active {
+    background-color: rgb(20, 108, 148);
   }
 
   .nav-links {
     display: none;
   }
+}
+
+.dropdown-menu {
+  background-color: rgb(29, 30, 34);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  display: none;
+  z-index: 1;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: rgba(25, 167, 206, 0.75);
+}
+
+.dropdown-menu ul li:active {
+  background-color: rgba(20, 108, 148, 0.75);
+}
+
+.dropdown-menu ul li a {
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu.active {
+  display: block;
 }
