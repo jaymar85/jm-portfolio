@@ -27,6 +27,7 @@ body {
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
+  border-bottom: 5px solid rgb(25, 167, 206);
 }
 
 .top-nav .logo {
@@ -39,6 +40,18 @@ body {
   align-items: center;
 }
 
+.top-nav .logo::before {
+  content: "<";
+  margin-right: 5px;
+  color: rgb(30, 30, 30);;
+}
+
+.top-nav .logo::after {
+  content: "/>";
+  margin-left: 5px;
+  color: rgb(30, 30, 30);
+}
+
 .navbar-logo {
   display: none;
   margin-left: 20px;
@@ -47,6 +60,18 @@ body {
   font-size: 20px;
   color: #fff;
   transition: .2s ease-in;
+}
+
+.navbar-logo::before {
+  content: "<";
+  margin-right: 5px;
+  color: #ff9d00;
+}
+
+.navbar-logo::after {
+  content: "/>";
+  margin-left: 5px;
+  color: #ff9d00;
 }
 
 .nav-links {
@@ -246,12 +271,19 @@ body {
   height: 500px;
   box-shadow: 5px 5px 20px grey;
   margin: 10px;
+  padding: 10px;
   text-align: center;
+  position: relative;
+}
+
+.project-card h3 {
+
+  border-bottom: 3px solid rgb(25, 167, 206);
 }
 
 .project-image {
   width: 90%;
-    margin: 25px auto;
+  margin: 25px auto 0;
 }
 
 .subtext {
@@ -259,13 +291,32 @@ body {
   font-weight: 300;
 }
 
-hr {
-  margin: 0 20px;
+.project-link--container {
+  position: absolute;
+  width: 100%;
+  right: 0%;
+  bottom: 0%;
+  color: #ff9d00;
+  transition: 0.15s ease-in;
 }
+
+.project-link--container .subtext {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* .project-card hr {
+  margin: 0 20px;
+  border: 1px solid #222;
+} */
 
 .project-link {
   text-decoration: none;
-  color: #ff9d00;
+}
+
+.project-link .project-link--container:hover {
+  background-color: rgb(25, 167, 206);
+  color: #fff;
 }
 
 .hamburger {
