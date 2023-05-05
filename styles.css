@@ -43,7 +43,7 @@ body {
 .top-nav .logo::before {
   content: "<";
   margin-right: 5px;
-  color: rgb(30, 30, 30);;
+  color: rgb(30, 30, 30);
 }
 
 .top-nav .logo::after {
@@ -59,7 +59,7 @@ body {
   color: #ff9d00;
   font-size: 20px;
   color: #fff;
-  transition: .2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .navbar-logo::before {
@@ -212,16 +212,16 @@ body {
 }
 
 @media only screen and (max-width: 576px) {
-    .about-me--container {
-      flex-direction: column;
-    }
-    .about-me-content--container {
-      width: 85%;
-    }
-    .about-me-content--container .resume-btn {
-      margin: auto;
-      text-align: center;
-    }
+  .about-me--container {
+    flex-direction: column;
+  }
+  .about-me-content--container {
+    width: 85%;
+  }
+  .about-me-content--container .resume-btn {
+    margin: auto;
+    text-align: center;
+  }
 }
 
 .resume-btn {
@@ -230,7 +230,7 @@ body {
   text-transform: uppercase;
   border: none;
   border-radius: 300px;
-  background-color: #ff9d00; 
+  background-color: #ff9d00;
   color: #fff;
   margin: auto;
   padding: 1rem 2rem;
@@ -256,7 +256,6 @@ body {
 .project--container {
   display: flex;
   justify-content: space-evenly;
-  /* padding: 80px; */
 }
 
 @media only screen and (max-width: 1000px) {
@@ -277,7 +276,6 @@ body {
 }
 
 .project-card h3 {
-
   border-bottom: 3px solid rgb(25, 167, 206);
 }
 
@@ -305,11 +303,6 @@ body {
   font-weight: bold;
 }
 
-/* .project-card hr {
-  margin: 0 20px;
-  border: 1px solid #222;
-} */
-
 .project-link {
   text-decoration: none;
 }
@@ -333,7 +326,7 @@ body {
     width: 37px;
     cursor: pointer;
     margin-right: 20px;
-    transition: .2s ease;
+    transition: 0.2s ease;
     border-radius: 50%;
     padding: 7px;
   }
